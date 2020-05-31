@@ -1,0 +1,8 @@
+Hauptbahnhof;Tisch 1;4
+Hauptbahnhof;Tisch 2;2
+Mariahilfer Strasse;T1;6
+Mariahilfer Strasse;T2;8
+Mariahilfer Strasse;T3;4
+Palais Luxus;Lounge Mozart;4
+Palais Luxus;Steffelblick;6
+Palais Luxus;Lipizzanerbox;8
