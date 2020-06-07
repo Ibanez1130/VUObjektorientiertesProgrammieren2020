@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #174260;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 45%;
+
+
+
+
+        }
+
+        h1,
+        h3 {
+            color: white;
+            text-align: center;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: -0.25em;
+            right: -0.25em;
+            background-color: hsla(341, 97%, 59%, 0.75);
+            transform-origin: center right;
+            transform: scaleX(0);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        span:hover::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Objekt Orientiertes Programmieren SS2019</h1>
+    <h3>1.Abgabe</h3>
+    <span><a href="/1.Abgabe/Angabe/doc/index.html">JAVADOC</a></span>
+    <h3>2.Abgabe</h3>
+    <span><a href="/2.Abgabe/Angabe/doc/index.html">JAVADOC </a></span>|<span><a
+            href="/2.Abgabe/Angabe/Klassendiagramme/">Klassendiagramme</a></span><br /><br />
+    <h3>3.Abgabe </h3>
+    <span><a href="/3.Abgabe/Angabe/doc/index.html">JAVADOC</a></span><br /><span><a
+            href="/3.Abgabe/Angabe/classdiagrams/">Klassendiagramme</a></span><br /><span><a
+            href="/3.Abgabe/Angabe/sequencediagrams/">Sequenzdiagramme</a></span><br /><br />
+
+</body>
+
+</html>
