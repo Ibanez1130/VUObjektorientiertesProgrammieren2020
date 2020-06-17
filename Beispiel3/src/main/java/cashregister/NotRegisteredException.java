@@ -1,8 +1,3 @@
-/**
- * @name Konstantin Kobel
- * @martrikelnummer 01525841
- * @date 30.05.2020
- */
 package cashregister;
 
 public class NotRegisteredException extends Exception {

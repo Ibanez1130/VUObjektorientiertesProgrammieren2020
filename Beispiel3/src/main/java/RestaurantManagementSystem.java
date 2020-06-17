@@ -1,8 +1,3 @@
-/**
- * @name Konstantin Kobel
- * @martrikelnummer 01525841
- * @date 31.05.2020
- */
 import cashregister.CashRegisterFactory;
 import managementserver.IManagementServer;
 import managementserver.ManagementServer;
