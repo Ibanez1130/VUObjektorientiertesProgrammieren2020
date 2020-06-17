@@ -1,8 +1,3 @@
-/**
- * @name Konstantin Kobel
- * @martrikelnummer 01525841
- * @date 13.03.2020
- */
 package rbvs;
 
 import rbvs.product.*;
@@ -87,7 +82,7 @@ public class Restaurant {
 		List<IProduct> l = new Vector<IProduct>();
 		IProduct p0 = (IProduct) new SimpleProduct("Vogerlsalat", 1);
 		IProduct p1 = (IProduct) new SimpleProduct("Salz", 0.01f);
-		IProduct p2 = (IProduct) new SimpleProduct("Öl", 0.03f);
+		IProduct p2 = (IProduct) new SimpleProduct("ï¿½l", 0.03f);
 		IProduct p3 = (IProduct) new SimpleProduct("Essig", 0.05f);
 		IProduct p4 = (IProduct) new SimpleProduct("Gurke", 1);
 		IProduct p5 = (IProduct) new SimpleProduct("Tomate", 1);
@@ -113,7 +108,7 @@ public class Restaurant {
 		
 		IProduct p0 = (IProduct) new SimpleProduct("Vogerlsalat", 1);
 		IProduct p1 = (IProduct) new SimpleProduct("Salz", 0.01f);
-		IProduct p2 = (IProduct) new SimpleProduct("Öl", 0.03f);
+		IProduct p2 = (IProduct) new SimpleProduct("ï¿½l", 0.03f);
 		IProduct p3 = (IProduct) new SimpleProduct("Essig", 0.05f);
 		IProduct p4 = (IProduct) new SimpleProduct("Gurke", 1);
 		IProduct p5 = (IProduct) new SimpleProduct("Tomate", 1);
@@ -241,10 +236,10 @@ public class Restaurant {
 		List<IProduct> compositeProducts = Restaurant.generateCompositeProducts();
 		List<IProduct> extendedProducts = new Vector<IProduct>();
 
-		IProduct ep1 = (IProduct) new ExtendedProduct("Grün-Tee", 2);
-		IProduct ep2 = (IProduct) new ExtendedProduct("Früchte-Tee", 1.5f);
+		IProduct ep1 = (IProduct) new ExtendedProduct("Grï¿½n-Tee", 2);
+		IProduct ep2 = (IProduct) new ExtendedProduct("Frï¿½chte-Tee", 1.5f);
 		IProduct ep3 = (IProduct) new ExtendedProduct("Schwarz-Tee", 3);
-		IProduct ep4 = (IProduct) new ExtendedProduct("Kräuter-Tee", 2);
+		IProduct ep4 = (IProduct) new ExtendedProduct("Krï¿½uter-Tee", 2);
 		IProduct ep5 = (IProduct) new ExtendedProduct("Ingwer-Zitronen-Tee", 5);
 
 		extendedProducts.add(ep1);
@@ -291,18 +286,18 @@ public class Restaurant {
 		((CompositeProduct) others).addProduct((Product) r.findProduct("Tomate-Mozzarella"));
 
 		r.orderProductForTable(r.getSpecificTable("Tisch 1"), r.findProduct("Standard Salat"), 2);
-		r.orderProductForTable(r.getSpecificTable("Tisch 1"), r.findProduct("Früchte-Tee"));
+		r.orderProductForTable(r.getSpecificTable("Tisch 1"), r.findProduct("Frï¿½chte-Tee"));
 		r.orderProductForTable(r.getSpecificTable("Tisch 1"), r.findProduct("Ingwer-Zitronen-Tee"));
 
 		r.orderProductForTable(r.getSpecificTable("Tisch 2"), r.findProduct("Champignon Salat"), 3);
 		r.orderProductForTable(r.getSpecificTable("Tisch 2"), r.findProduct("Tomate-Mozzarella"));
 		r.orderProductForTable(r.getSpecificTable("Tisch 2"), r.findProduct("Schwarz-Tee"), 2);
-		r.orderProductForTable(r.getSpecificTable("Tisch 2"), r.findProduct("Grün-Tee"), 2);
+		r.orderProductForTable(r.getSpecificTable("Tisch 2"), r.findProduct("Grï¿½n-Tee"), 2);
 
 		r.orderProductForTable(r.getSpecificTable("Tisch 3"), r.findProduct("Champignon Salat"));
 		r.orderProductForTable(r.getSpecificTable("Tisch 3"), r.findProduct("Standard Salat"));
 		r.orderProductForTable(r.getSpecificTable("Tisch 3"), r.findProduct("Schwarz-Tee"), 2);
-		r.orderProductForTable(r.getSpecificTable("Tisch 3"), r.findProduct("Kräuter-Tee"), 2);
+		r.orderProductForTable(r.getSpecificTable("Tisch 3"), r.findProduct("Krï¿½uter-Tee"), 2);
 
 		System.out.println(r.toString());
 		
@@ -357,7 +352,7 @@ public class Restaurant {
 		System.out.println("BONUSAUFGABE!");
 		
 		RestaurantChain rc = new RestaurantChain("The Chain");
-		File file = new File("C:\\Users\\Konstantin Kobel\\Documents\\Eclipse\\01525841_Beispiel1_Kobel\\src\\initFile.txt");
+		File file = new File("C:\\---\\src\\initFile.txt");
 
 		try {
 			rc.initiateRestaurantChain(file);

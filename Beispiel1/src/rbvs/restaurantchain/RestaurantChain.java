@@ -1,9 +1,3 @@
-/**
- * @name Konstantin Kobel
- * @martrikelnummer 01525841
- * @date 04.04.2020
- */
-
 package rbvs.restaurantchain;
 
 import java.io.File;
