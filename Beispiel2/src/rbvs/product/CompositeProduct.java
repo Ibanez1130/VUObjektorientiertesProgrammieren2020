@@ -1,8 +1,3 @@
-/**
- * @name Konstantin Kobel
- * @martrikelnummer 01525841
- * @date 01.05.2020
- */
 package rbvs.product;
 
 import java.util.Collection;

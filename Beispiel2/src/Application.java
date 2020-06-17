@@ -1,8 +1,3 @@
-/**
- * @name Konstantin Kobel
- * @martrikelnummer 01525841
- * @date 03.05.2020
- */
 import tree.*;
 import tree.node.*;
 import java.util.Collection;
@@ -38,10 +33,10 @@ public class Application {
 		GenericTreeNode<String> root = new GenericTreeNode<String>("Bundeskanzler", "Sebastian Kurz");
 		GenericTree<String> t = new GenericTree<String>(root);
 
-		GenericTreeNode<String> ministerium1 = new GenericTreeNode<String>("Ministerium", "Kunst, Kultur, öffentlichen Dienst und Sport");
+		GenericTreeNode<String> ministerium1 = new GenericTreeNode<String>("Ministerium", "Kunst, Kultur, ï¿½ffentlichen Dienst und Sport");
 		GenericTreeNode<String> ministerium1minister = new GenericTreeNode<String>("Minister", "Werner Kogler");
-		GenericTreeNode<String> ministerium1mitarbeiter1 = new GenericTreeNode<String>("Staatssekretärin", "Ulrike Lunacek");
-		GenericTreeNode<String> ministerium1mitarbeiter2 = new GenericTreeNode<String>("Generalsekretärin", "Wildfellner Eva");
+		GenericTreeNode<String> ministerium1mitarbeiter1 = new GenericTreeNode<String>("Staatssekretï¿½rin", "Ulrike Lunacek");
+		GenericTreeNode<String> ministerium1mitarbeiter2 = new GenericTreeNode<String>("Generalsekretï¿½rin", "Wildfellner Eva");
 		GenericTreeNode<String> ministerium1mitarbeiter3 = new GenericTreeNode<String>("Leitung", "Brosz Dieter");
 		
 
@@ -49,19 +44,19 @@ public class Application {
 		GenericTreeNode<String> ministerium2minister = new GenericTreeNode<String>("Minister", "Rudolf Anschober");
 		GenericTreeNode<String> ministerium2mitarbeiter1 = new GenericTreeNode<String>("Leitung", "Lichtenecker Ruperta");
 		GenericTreeNode<String> ministerium2mitarbeiter2 = new GenericTreeNode<String>("Pressesprecherin", "Draxl Margit");
-		GenericTreeNode<String> ministerium2mitarbeiter3 = new GenericTreeNode<String>("Mitarbeiterin", "Häckel-Schinkinger Katharina");
+		GenericTreeNode<String> ministerium2mitarbeiter3 = new GenericTreeNode<String>("Mitarbeiterin", "Hï¿½ckel-Schinkinger Katharina");
 		
 		GenericTreeNode<String> ministerium3 = new GenericTreeNode<String>("Ministerium", "Finanzen");
-		GenericTreeNode<String> ministerium3minister = new GenericTreeNode<String>("Minister", "Gernot Blümel");
+		GenericTreeNode<String> ministerium3minister = new GenericTreeNode<String>("Minister", "Gernot Blï¿½mel");
 		GenericTreeNode<String> ministerium3mitarbeiter1 = new GenericTreeNode<String>("Leitung", "Niedrist Clemens-Wolfgang");
-		GenericTreeNode<String> ministerium3mitarbeiter2 = new GenericTreeNode<String>("Stellvertretung", "Müller-Guttenbrunn Iris");
+		GenericTreeNode<String> ministerium3mitarbeiter2 = new GenericTreeNode<String>("Stellvertretung", "Mï¿½ller-Guttenbrunn Iris");
 		GenericTreeNode<String> ministerium3mitarbeiter3 = new GenericTreeNode<String>("Mitarbeiterin", "Glaser-Steiner Maria");
 		
 		GenericTreeNode<String> ministerium4 = new GenericTreeNode<String>("Ministerium", "Bildung, Wissenschaft und Forschung");
-		GenericTreeNode<String> ministerium4minister = new GenericTreeNode<String>("Minister", "Heinz Faßmann");
-		GenericTreeNode<String> ministerium4mitarbeiter1 = new GenericTreeNode<String>("Generalsekretär", "Martin Netzer");
-		GenericTreeNode<String> ministerium4mitarbeiter2 = new GenericTreeNode<String>("Ombudsstelle für Studierende", "Josef Leidenfrost");
-		GenericTreeNode<String> ministerium4mitarbeiter3 = new GenericTreeNode<String>("Ombudsstelle für Schulen", "Kurt Nekula");
+		GenericTreeNode<String> ministerium4minister = new GenericTreeNode<String>("Minister", "Heinz Faï¿½mann");
+		GenericTreeNode<String> ministerium4mitarbeiter1 = new GenericTreeNode<String>("Generalsekretï¿½r", "Martin Netzer");
+		GenericTreeNode<String> ministerium4mitarbeiter2 = new GenericTreeNode<String>("Ombudsstelle fï¿½r Studierende", "Josef Leidenfrost");
+		GenericTreeNode<String> ministerium4mitarbeiter3 = new GenericTreeNode<String>("Ombudsstelle fï¿½r Schulen", "Kurt Nekula");
 		
 		Collection<ITreeNode<String>> tmp = root.getChildren();
 		
@@ -116,7 +111,7 @@ public class Application {
 		
 		Product p0 = new SimpleProduct("Vogerlsalat", 1);
 		Product p1 = new SimpleProduct("Salz", 0.01f);
-		Product p2 = new SimpleProduct("Öl", 0.03f);
+		Product p2 = new SimpleProduct("ï¿½l", 0.03f);
 		Product p3 = new SimpleProduct("Essig", 0.05f);
 		Product p4 = new SimpleProduct("Gurke", 1);
 		Product p5 = new SimpleProduct("Tomate", 1);
