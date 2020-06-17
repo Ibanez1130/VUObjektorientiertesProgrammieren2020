@@ -60,7 +60,7 @@ public class CashRegisterConsoleUI implements ICashRegisterUI {
 	public void displayTransaction (PaymentTransaction transaction) {
 		System.out.println("\n!------------PaymentTransaction------------!");
 		System.out.println("ID: " + transaction.getTransactionId());
-		System.out.println("Paid prive: " + transaction.getPaidPrice());
+		System.out.println("Paid price: " + transaction.getPaidPrice());
 		System.out.println("Provider name: " + transaction.getPaymentProviderName());
 		System.out.println("Timestamp: " + transaction.getTimestamp());
 	}

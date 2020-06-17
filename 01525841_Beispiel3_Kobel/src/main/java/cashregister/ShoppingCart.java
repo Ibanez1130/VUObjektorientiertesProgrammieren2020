@@ -6,6 +6,7 @@
 package cashregister;
 
 import java.util.Collection;
+import java.util.Vector;
 import java.util.stream.Collectors;
 
 import rbvs.product.IShoppingCartElement;
@@ -16,6 +17,7 @@ public class ShoppingCart implements IShoppingCart {
 
 	public ShoppingCart (long id) {
 		this.id = id;
+		this.shoppingCartElements = new Vector<IShoppingCartElement>();
 	}
 	
 	public Long getShoppingCartID () {
@@ -56,6 +58,6 @@ public class ShoppingCart implements IShoppingCart {
 				.stream()
 				.map(e -> e.getName())
 				.collect(Collectors.joining(", "));
-		return "ShoppingCart [ id = " + this.id + ", shoppingCartElements = [ " + elements + " ]]";
+		return "ShoppingCart [ id = " + this.id + ", shoppingCartElements = [ " + elements + " ] ]";
 	}
 }

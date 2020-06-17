@@ -7,7 +7,6 @@ package cashregister;
 
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Vector;
 
 import rbvs.product.IShoppingCartElement;
 import rbvs.record.IInvoice;
@@ -77,14 +76,21 @@ public class CashRegister implements IObserver, ICashRegister {
 		if (sc == null) throw new ShoppingCartNotFoundException(this.id, id);
 		PaymentTransaction t = provider.pay(sc.getTotalPriceOfElements());
 		IInvoice i = new Invoice();
-
-		i.addPaymentTransaction(t);
-		Collection<IShoppingCartElement> c = new Vector<IShoppingCartElement>();
+		
+		Collection<IShoppingCartElement> c = new Container<IShoppingCartElement>();
+		// removeCopy is a second Collection, which stores the elements from the currentElements of the ShoppingCart. 
+		// Since we run into problems if we remove items from a collection, we currently iterate over,
+		// this is a little dirty hack to make it work anyways.
+		Collection<IShoppingCartElement> removeCopy = new Container<IShoppingCartElement>();
 		for (IShoppingCartElement e:sc.currentElements()) {
 			c.add(e.deepCopy());
-			sc.removeElement(e);
+			removeCopy.add(e);
+		}
+		for (IShoppingCartElement sce:removeCopy) {
+			sc.removeElement(sce);
 		}
 		i.setInvoiceProducts(c);
+		i.addPaymentTransaction(t);
 		this.records.add(i);
 		return i;
 	}
@@ -180,5 +186,9 @@ public class CashRegister implements IObserver, ICashRegister {
 	
 	public String toString () {
 		return "CashRegister [ id = " + this.id + ", records = " + this.records.size() + ", uis = " + this.uis.size() + ", products = " + this.products.generateConsoleView("\t") + ", subjects = " + this.subjects.size() + ", shoppingCarts = " + this.shoppingCarts.size() + " ]";
+	}
+	
+	public Collection<IInvoice> getRecords () {
+		return this.records;
 	}
 }

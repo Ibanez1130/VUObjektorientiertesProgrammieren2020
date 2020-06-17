@@ -162,20 +162,22 @@ public class ManagementServer implements IManagementServer, IWarehouseListener, 
 	}
 	
 	public boolean register (IObserver obs) {
-		if (obs == null || this.observer.contains(obs)) return false;
+		if (obs == null) return false;
 		obs.activateNotifications(this);
 		obs.notifyChange(this);
-		return this.observer.add(obs);
+		return (this.observer.contains(obs)) ? true : this.observer.add(obs);
 	}
 	
 	public boolean unregister (IObserver obs) {
-		if (obs == null || !(this.observer.contains(obs))) return false;
+		if (obs == null) return false;
 		obs.deactivateNotifications(this);
 		return this.observer.remove(obs);
 	}
 	
 	public void propagateProducts () {
-		this.observer.stream().forEach(o -> o.notifyChange(this));
+		this.observer
+			.stream()
+			.forEach(o -> o.notifyChange(this));
 	}
 	
 	public ITree<IProduct> retrieveProductSortiment () {

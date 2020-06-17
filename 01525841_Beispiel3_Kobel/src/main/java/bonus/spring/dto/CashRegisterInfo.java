@@ -1,3 +1,8 @@
+/**
+ * @name Konstantin Kobel
+ * @martrikelnummer 01525841
+ * @date 01.06.2020
+ */
 package bonus.spring.dto;
 
 public class CashRegisterInfo {

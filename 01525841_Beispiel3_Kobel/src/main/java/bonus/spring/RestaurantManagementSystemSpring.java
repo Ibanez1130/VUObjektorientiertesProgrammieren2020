@@ -1,3 +1,8 @@
+/**
+ * @name Konstantin Kobel
+ * @martrikelnummer 01525841
+ * @date 01.06.2020
+ */
 package bonus.spring;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +23,8 @@ import warehouse.IWarehouse;
 import warehouse.IWarehouseListener;
 import warehouse.Warehouse;
 import warehouse.ui.WarehouseManager;
+import rbvs.product.IShoppingCartElement;
+import paymentprovider.*;
 
 @SpringBootApplication
 public class RestaurantManagementSystemSpring {
@@ -30,8 +37,6 @@ public class RestaurantManagementSystemSpring {
 		// TODO: Place your code from RestaurantManagementSystem here.
 		// this method starts the application as normal. No special attention is needed
 		// for the REST-Controllers in package bonus.spring.controllers
-		
-		System.out.println("Yes, we are in here!");
 
 		// Create ManagementServer and Warehouse
 		IManagementServer mngServer = ManagementServer.GET_INSTANCE();
@@ -80,7 +85,23 @@ public class RestaurantManagementSystemSpring {
 		
 		// TODO: create CashRegister and register it as an observer at the mngServer
 		ICashRegister cr = CashRegisterFactory.createCashRegister();
+		ICashRegister cr2 = CashRegisterFactory.createCashRegister();
+		ICashRegister cr3 = CashRegisterFactory.createCashRegister();
+		ICashRegister cr4 = CashRegisterFactory.createCashRegister();
+		
+		cr.addShoppingCart();
+		
 		mngServer.addCashRegister(cr);
+		mngServer.addCashRegister(cr2);
+		mngServer.addCashRegister(cr3);
+		mngServer.addCashRegister(cr4);
+		
+		cr.addProductToShoppingCart((long) 1, (IShoppingCartElement) apfel);
+		try {
+			cr.payShoppingCart(1, new CreditCardProvider("Erste Bank"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 		// TODO: Create GUI for CashRegister
 		ICashRegisterUI ui = new CashRegisterConsoleUI();

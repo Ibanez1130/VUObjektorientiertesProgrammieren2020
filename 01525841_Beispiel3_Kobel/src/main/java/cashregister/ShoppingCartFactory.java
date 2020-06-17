@@ -6,7 +6,7 @@
 package cashregister;
 
 public class ShoppingCartFactory {
-	private static long SHOPPING_CART_ID;
+	private static long SHOPPING_CART_ID = 0;
 
 	public ShoppingCartFactory() {
 		// TODO Auto-generated constructor stub
