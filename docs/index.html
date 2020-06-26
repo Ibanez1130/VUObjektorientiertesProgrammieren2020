@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #174260;
+            font-family:'Courier New';
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            margin-left: 45%;
+        }
+
+        h1, h3 {
+            color: white;
+            text-align: center;
+        }
+
+        span {
+            position: relative;
+            z-index: 1;
+
+        }
+
+        span::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            bottom: 0;
+            left: -0.25em;
+            right: -0.25em;
+            background-color: hsla(341, 97%, 59%, 0.75);
+            transform-origin: center right;
+            transform: scaleX(0);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        span:hover::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Objektorientiertes Programmieren SS2020</h1>
+    <span><a href="./README.md">ReadMe</a></span><br /><br />
+    <h3>Einf&uuml;hrungsbeispiel</h3>
+    <span><a href="./Einfuehrungsbeispiel/angabe/">Angabe</a></span><br /><br />
+    <span><a href="./Einfuehrungsbeispiel/src/">Abgabe</a></span>
+    <h3>1. Abgabe</h3>
+    <span><a href="../Beispiel1/angabe/">Angabe</a></span><br />
+    <span><a href="./Beispiel1/angabe/doc/index.html">JAVADOC</a></span><br />
+    <span><a href="./Beispiel1/angabe/Klassendiagramme/">Klassendiagramm</a></span><br /><br />
+    <span><a href="./Beispiel1/src/">Abgabe</a></span>
+    <h3>2. Abgabe</h3>
+    <span><a href="./Beispiel2/angabe/">Angabe</a></span><br />
+    <span><a href="./Beispiel2/angabe/doc/index.html">JAVADOC</a></span><br />
+    <span><a href="./Beispiel2/angabe/Klassendiagramme/">Klassendiagramme</a></span><br /><br />
+    <span><a href="./Beispiel2/src/">Abgabe</a></span>
+    <h3>3. Abgabe</h3>
+    <span><a href="./Beispiel3/Angabe/">Angabe</a></span><br />
+    <span><a href="./Beispiel3/doc/index.html">JAVADOC</a></span><br />
+    <span><a href="./Beispiel3/classdiagrams/">Klassendiagramme</a></span><br />
+    <span><a href="./Beispiel3/sequencediagrams/">Sequenzdiagramme</a></span><br /><br />
+    <span><a href="./Beispiel3/src/">Abgabe</a></span>
+</body>
+
+</html>
